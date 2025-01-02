@@ -1,0 +1,224 @@
+:root {
+    --primary-color: #4776E6;
+    --secondary-color: #8E54E9;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.signup-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    backdrop-filter: blur(10px);
+}
+
+.signup-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.signup-header i {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.signup-header h2 {
+    margin: 0;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+.signup-header p {
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.input-group input {
+    width: calc(100% - 80px);
+    padding: 12px 40px;
+    border: 2px solid #eee;
+    border-radius: 50px;
+    outline: none;
+    transition: all 0.3s;
+    font-size: 1rem;
+    background-color: #f8f9fa;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: var(--primary-color);
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(71, 118, 230, 0.1);
+}
+
+.error-message {
+    display: none;
+    color: #ff4444;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+.input-group input:invalid:not(:placeholder-shown) {
+    border-color: #ff4444;
+}
+
+.input-group input:invalid:not(:placeholder-shown) + .error-message {
+    display: block;
+}
+
+.terms-group {
+    margin-bottom: 1.5rem;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.terms a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.signup-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.signup-btn:hover {
+    transform: translateY(-2px);
+}
+
+.divider {
+    text-align: center;
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background: #ddd;
+}
+
+.divider::before { left: 0; }
+.divider::after { right: 0; }
+
+.divider span {
+    background: white;
+    padding: 0 15px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.social-signup {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: transform 0.3s;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+}
+
+.google { background: #DB4437; color: white; }
+.facebook { background: #4267B2; color: white; }
+.twitter { background: #1DA1F2; color: white; }
+
+.login-link {
+    text-align: center;
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .signup-container {
+        padding: 1.5rem;
+    }
+
+    .signup-header i {
+        font-size: 2.5rem;
+    }
+
+    .signup-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .terms {
+        font-size: 0.8rem;
+    }
+}
